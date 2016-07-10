@@ -219,7 +219,7 @@ class Main extends Base implements Listener{
 					}
 				}
 				case "skyworld":
-				if($sender->hasPemission("skyworld") || $sender->hasPemission("skyworld.cmd")){
+				if($sender->hasPermission("skyworld") || $sender->hasPermission("skyworld.cmd")){
 					if(isset($args[0])){
 						if(strtolower($args[0]) == "help"){
 							// There hasn't been any multilanguage setting fo this, so i just put it in english
