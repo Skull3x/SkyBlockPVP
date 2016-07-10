@@ -291,8 +291,8 @@ class Main extends Base implements Listener{
 	}
 	
 	// Island Generator
-	public function createIsland($name){
-		$player = $this->getServer()->getPlayerByName($name);
+	public function createIsland(Player $player){
+		//$player = $this->getServer()->getPlayerByName($name);
 		$x = rand(0, 1000);
 		$y = 100;
 		$z = rand(0, 1000);
@@ -304,7 +304,7 @@ class Main extends Base implements Listener{
 		$isFile->set("Y", $y);
 		$isFile->set("Z", $z);
 		$isFile->set("World", $player->getLevel()->getName());
-		$file->save();
+		$isFile->save();
 		
 		// Make the island
 		$level->setBlock(new Vector3($x, $y, $z));
